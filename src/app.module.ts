@@ -8,10 +8,10 @@ import { UserModule } from './domain/users/users.module';
 
 @Module({
   imports: [
+    UserModule,
+    BooksModule,
     ConfigModule.forRoot({ isGlobal: true }),
     DatabaseModule,
-    BooksModule,
-    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
